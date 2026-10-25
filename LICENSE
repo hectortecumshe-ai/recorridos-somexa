@@ -1,0 +1,12 @@
+Recorridos SOMEXA · Ruta 1 (Recorrido SOMEXA 2026) y Ruta 2 (Ruta de Altura)
+Copyright (c) 2026 Héctor Tecumshé Mojica-Zárate, José Gervasio Partida-Sedas, Sergio Alejo-Bello, José Orlando Rojas-Reyes
+
+Esta obra está bajo la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).
+Puedes compartirla y adaptarla para cualquier propósito, siempre que des el crédito correspondiente
+a los autores, enlaces a la licencia e indiques si hiciste cambios.
+Texto completo: https://creativecommons.org/licenses/by/4.0/legalcode.es
+
+Componentes de terceros incluidos en 2026-ruta-1/vendor/ y 2026-ruta-2/vendor/:
+- three.js 0.128.0 (licencia MIT, (c) three.js authors): https://github.com/mrdoob/three.js
+- Fuentes Archivo y Bricolage Grotesque (SIL Open Font License 1.1), Google Fonts
+- Datos de elevación SRTM 30 m (NASA/USGS, dominio público) vía OpenTopoData; rutas de OpenStreetMap (ODbL)

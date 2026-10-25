@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Si usas esta guía, cítala como se indica. / If you use this guide, please cite it as below."
+title: "Recorrido SOMEXA 2026: guía de campo para celular del recorrido por zonas tropicales de agricultura agroecológica (IV Congreso Mexicano de Agroecología 2026)"
+version: 1.1.0
+doi: "10.5281/zenodo.23642326"
+date-released: 2026-10-25
+type: software
+license: CC-BY-4.0
+authors:
+  - family-names: "Mojica-Zárate"
+    given-names: "Héctor Tecumshé"
+    orcid: "https://orcid.org/0000-0002-9067-3983"
+  - family-names: "Partida-Sedas"
+    given-names: "José Gervasio"
+  - family-names: "Alejo-Bello"
+    given-names: "Sergio"
+  - family-names: "Rojas-Reyes"
+    given-names: "José Orlando"
+repository-code: "https://github.com/hectortecumshe-ai/recorridos-somexa"
+url: "https://hectortecumshe-ai.github.io/recorridos-somexa/2026-ruta-1/"
+keywords: [agroecology, field guide, progressive web app, offline, Veracruz, Mexico, agroecología, guía de campo]
