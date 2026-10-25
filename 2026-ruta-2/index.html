@@ -94,6 +94,7 @@ section { display: grid; gap: 12px; min-width: 0 }
 .sellos img { width: 64px; height: 64px; object-fit: contain; border-radius: 14px; background: #fff; padding: 3px; box-shadow: 0 2px 10px rgb(0 0 0 / .2) }
 .sellos div { display: grid; line-height: 1.25; font-size: .92rem } .sellos b { font-size: 1rem }
 .filete { height: 1px; background: linear-gradient(90deg, rgb(255 255 255 / .55), rgb(255 255 255 / 0)) }
+.lema { font-style: italic; font-size: 1.02rem; color: #f3e7c4 !important; border-left: 3px solid #f3d79b; padding-left: 10px }
 .credito { font-size: .95rem } .credito b { color: #fff }
 .cifras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px }
 .cifra { border-top: 2px solid rgb(255 255 255 / .5); padding-top: 7px }
@@ -915,6 +916,7 @@ function renderRuta() {
     <header class="portada">
       <div class="sellos"><img src="vendor/logo_somexa_original.jpg" alt="Logotipo de SOMEXA"><img src="vendor/logo_uach_web.jpg" alt="Logotipo de la Universidad Autónoma Chapingo">
         <div><b>${esc(D.congreso)}</b><span>Salida de campo · Ruta 2</span></div></div>
+      <p class="lema">«${esc(D.lema)}»</p>
       <div class="filete"></div>
       <p class="versalita">SOMEXA · ${esc(D.fecha)}</p>
       <h1>${esc(D.nombre_corto)}</h1>
