@@ -7,7 +7,7 @@ al abrirla una vez, el navegador la guarda en el teléfono. Portada: https://hec
 | Guía | Fecha | Carpeta | Itinerario |
 |---|---|---|---|
 | Ruta 1 · Recorrido por zonas tropicales de agricultura agroecológica (versión 1.1.0, DOI 10.5281/zenodo.23642326) | 14 de noviembre de 2026 | [`2026-ruta-1/`](2026-ruta-1/) | [Word](itinerarios/2026-ruta-1-itinerario.docx) |
-| Ruta 2 · Ruta de Altura: frutales de montaña y agroecología en las faldas del Citlaltépetl | 14 de noviembre de 2026 | [`2026-ruta-2/`](2026-ruta-2/) | [Word](itinerarios/2026-ruta-2-itinerario.docx) |
+| Ruta 2 · Ruta de Altura: frutales de montaña y agroecología en las faldas del Citlaltépetl (versión 1.0.0, DOI 10.5281/zenodo.23642554) | 14 de noviembre de 2026 | [`2026-ruta-2/`](2026-ruta-2/) | [Word](itinerarios/2026-ruta-2-itinerario.docx) |
 
 Cada carpeta incluye además un archivo `.html` único con todo incrustado, para compartirlo y abrirlo sin conexión.
 Las direcciones anteriores (`recorridos-de-campo/somexa-2026/`) redirigen aquí.
@@ -15,7 +15,7 @@ Las direcciones anteriores (`recorridos-de-campo/somexa-2026/`) redirigen aquí.
 ## Cómo citar
 
 - Mojica-Zárate, H. T.; Partida-Sedas, J. G.; Alejo-Bello, S.; Rojas-Reyes, J. O. (2026). Recorrido SOMEXA 2026: guía de campo para celular del recorrido por zonas tropicales de agricultura agroecológica (IV Congreso Mexicano de Agroecología 2026) (versión 1.1.0). Zenodo. https://doi.org/10.5281/zenodo.23642326
-- Mojica-Zárate, H. T. (2026). Ruta de Altura: guía de campo para celular del recorrido SOMEXA 2026, Ruta 2, frutales de montaña y agroecología en las faldas del Citlaltépetl (Versión 1.0.0) [Software]. Universidad Autónoma Chapingo. https://hectortecumshe-ai.github.io/recorridos-somexa/2026-ruta-2/
+- Mojica-Zárate, H. T. (2026). Ruta de Altura: guía de campo para celular del recorrido SOMEXA 2026, Ruta 2, frutales de montaña y agroecología en las faldas del Citlaltépetl (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23642554
 
 ## Más allá del recorrido
 

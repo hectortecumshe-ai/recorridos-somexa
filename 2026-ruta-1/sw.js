@@ -1,5 +1,5 @@
 // Guarda la guía en el teléfono para usarla sin internet.
-const CACHE = "somexa-2026-ruta-1-955e891561";
+const CACHE = "somexa-2026-ruta-1-d1a2bbfa01";
 const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "recorrido-somexa-2026.html", "vendor/logo_somexa_original.jpg", "vendor/OrbitControls.js", "vendor/three.min.js", "vendor/fuentes/Archivo-latin-79dc5e.woff2", "vendor/fuentes/Archivo-latin-ext-20ba07.woff2", "vendor/fuentes/BricolageGrotesque-latin-a97232.woff2", "vendor/fuentes/BricolageGrotesque-latin-ext-a4fe79.woff2", "vendor/fuentes/fuentes.css"];
 
 self.addEventListener("install", (e) => {
