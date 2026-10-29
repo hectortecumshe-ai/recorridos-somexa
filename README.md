@@ -21,6 +21,5 @@ Las direcciones anteriores (`recorridos-de-campo/somexa-2026/`) redirigen aquí.
 
 Lo que hoy observas en campo —el saber campesino, la diversidad de cultivos, el agua, el suelo y los animales— también se puede documentar, medir y planear. La familia Ratio, desarrollada en la Universidad Autónoma Chapingo, reúne aplicaciones libres para el teléfono y la computadora, con instructivos para productores y para científicos y con DOI para citarlas. Portal de la familia Ratio: https://hectortecumshe-ai.github.io/
 
-Otra familia de guías: [Viajes de estudio propedéutico](https://hectortecumshe-ai.github.io/viajes-de-estudio-propedeutico/).
 
 Licencia: CC BY 4.0 (ver `LICENSE`).
