@@ -1,5 +1,5 @@
 // Guarda la guía de la Ruta de Altura en el teléfono para usarla sin internet.
-const CACHE = "somexa-2026-ruta-2-fb8abfc725";
+const CACHE = "somexa-2026-ruta-2-cbe01cb9c4";
 const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "vendor/OrbitControls.js", "vendor/logo_somexa_original.jpg", "vendor/logo_uach_web.jpg", "vendor/relieve.jpg", "vendor/three.min.js"];
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(RECURSOS)).then(() => self.skipWaiting())));
 self.addEventListener("activate", (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("somexa-2026-ruta-2-") && k !== CACHE)
