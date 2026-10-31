@@ -1,6 +1,6 @@
 // Guarda la guía en el teléfono para usarla sin internet.
-const CACHE = "somexa-2026-ruta-1-f1066bff4a";
-const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "recorrido-somexa-2026.html", "vendor/logo_somexa_original.jpg", "vendor/logo_uach_web.jpg", "vendor/OrbitControls.js", "vendor/three.min.js", "vendor/fuentes/Archivo-latin-79dc5e.woff2", "vendor/fuentes/Archivo-latin-ext-20ba07.woff2", "vendor/fuentes/BricolageGrotesque-latin-a97232.woff2", "vendor/fuentes/BricolageGrotesque-latin-ext-a4fe79.woff2", "vendor/fuentes/fuentes.css"];
+const CACHE = "somexa-2026-ruta-1-6a3ef969e5";
+const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "recorrido-somexa-2026.html", "vendor/logo_cenidercafe.jpg", "vendor/logo_somexa_original.jpg", "vendor/logo_uach_web.jpg", "vendor/OrbitControls.js", "vendor/three.min.js", "vendor/fuentes/Archivo-latin-79dc5e.woff2", "vendor/fuentes/Archivo-latin-ext-20ba07.woff2", "vendor/fuentes/BricolageGrotesque-latin-a97232.woff2", "vendor/fuentes/BricolageGrotesque-latin-ext-a4fe79.woff2", "vendor/fuentes/fuentes.css"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(RECURSOS)).then(() => self.skipWaiting()));
