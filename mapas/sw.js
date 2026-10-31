@@ -1,5 +1,5 @@
 // Guarda los mapas de SOMEXA en el teléfono para usarlos sin internet.
-const CACHE = "mapas-somexa-a297eda3b4";
+const CACHE = "mapas-somexa-e18541faec";
 const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png"];
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(RECURSOS)).then(() => self.skipWaiting())));
 self.addEventListener("activate", (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("mapas-somexa-") && k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())));
