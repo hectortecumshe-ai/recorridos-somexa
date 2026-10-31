@@ -6,9 +6,9 @@ al abrirla una vez, el navegador la guarda en el teléfono. Portada: https://hec
 
 | Guía | Fecha | Carpeta | Itinerario |
 |---|---|---|---|
-| Ruta 1 · Recorrido por zonas tropicales de agricultura agroecológica (versión 1.1.3, DOI 10.5281/zenodo.23787066) | 14 de noviembre de 2026 | [`2026-ruta-1/`](2026-ruta-1/) | [Word](itinerarios/2026-ruta-1-itinerario.docx) |
-| Ruta 2 · Ruta de Altura: frutales de montaña y agroecología en las faldas del Citlaltépetl (versión 1.0.3, DOI 10.5281/zenodo.23787064) | 14 de noviembre de 2026 | [`2026-ruta-2/`](2026-ruta-2/) | [Word](itinerarios/2026-ruta-2-itinerario.docx) |
-| Ruta 3 · Ruta del Café y el Chayote: de la semilla a la empresa en la montaña cafetalera de Veracruz (versión 1.0.0, DOI 10.5281/zenodo.23843072) | 14 de noviembre de 2026 | [`2026-ruta-3/`](2026-ruta-3/) | [Word](itinerarios/2026-ruta-3-itinerario.docx) |
+| Ruta 1 · Recorrido por zonas tropicales de agricultura agroecológica (versión 1.1.3, DOI 10.5281/zenodo.23787066) | 14 de noviembre de 2026 | [`2026-ruta-1/`](2026-ruta-1/) | [PDF](itinerarios/2026-ruta-1-itinerario.pdf) · [Word](itinerarios/2026-ruta-1-itinerario.docx) |
+| Ruta 2 · Ruta de Altura: frutales de montaña y agroecología en las faldas del Citlaltépetl (versión 1.0.3, DOI 10.5281/zenodo.23787064) | 14 de noviembre de 2026 | [`2026-ruta-2/`](2026-ruta-2/) | [PDF](itinerarios/2026-ruta-2-itinerario.pdf) · [Word](itinerarios/2026-ruta-2-itinerario.docx) |
+| Ruta 3 · Ruta del Café y el Chayote: de la semilla a la empresa en la montaña cafetalera de Veracruz (versión 1.0.0, DOI 10.5281/zenodo.23843072) | 14 de noviembre de 2026 | [`2026-ruta-3/`](2026-ruta-3/) | [PDF](itinerarios/2026-ruta-3-itinerario.pdf) · [Word](itinerarios/2026-ruta-3-itinerario.docx) |
 | Antología de recorridos SOMEXA 2026: monografías de las localidades visitadas desde un enfoque de Sistemas Complejos Adaptativos (en línea y PDF) | noviembre de 2026 | [`antologia/`](antologia/) | [PDF](antologia/Antologia-recorridos-SOMEXA-2026.pdf) · [DOI 10.5281/zenodo.23845759](https://doi.org/10.5281/zenodo.23845759) |
 | Huatusco · Mapas del Congreso: campus CAR y ciudad de Huatusco (hoteles, comida, taxis, autobuses, farmacias, salud…) | durante el congreso | [`mapas/`](mapas/) | QR: [CAR](mapas/qr-mapa-car.png) · [Huatusco](mapas/qr-mapa-huatusco.png) |
 
