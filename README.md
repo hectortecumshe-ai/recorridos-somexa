@@ -8,7 +8,7 @@ al abrirla una vez, el navegador la guarda en el teléfono. Portada: https://hec
 |---|---|---|---|
 | Ruta 1 · Recorrido por zonas tropicales de agricultura agroecológica (versión 1.1.3, DOI 10.5281/zenodo.23787066) | 14 de noviembre de 2026 | [`2026-ruta-1/`](2026-ruta-1/) | [Word](itinerarios/2026-ruta-1-itinerario.docx) |
 | Ruta 2 · Ruta de Altura: frutales de montaña y agroecología en las faldas del Citlaltépetl (versión 1.0.3, DOI 10.5281/zenodo.23787064) | 14 de noviembre de 2026 | [`2026-ruta-2/`](2026-ruta-2/) | [Word](itinerarios/2026-ruta-2-itinerario.docx) |
-| Mapas alegres de Huatusco: CAR Huatusco y ciudad de Huatusco (hoteles, comida, taxis, autobuses, farmacias, salud…) | durante el congreso | [`mapas/`](mapas/) | QR: [CAR](mapas/qr-mapa-car.png) · [Huatusco](mapas/qr-mapa-huatusco.png) |
+| Huatusco · Mapas del Congreso: campus CAR y ciudad de Huatusco (hoteles, comida, taxis, autobuses, farmacias, salud…) | durante el congreso | [`mapas/`](mapas/) | QR: [CAR](mapas/qr-mapa-car.png) · [Huatusco](mapas/qr-mapa-huatusco.png) |
 
 Cada carpeta incluye además un archivo `.html` único con todo incrustado, para compartirlo y abrirlo sin conexión.
 Las direcciones anteriores (`recorridos-de-campo/somexa-2026/`) redirigen aquí.
