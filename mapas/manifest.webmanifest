@@ -1,0 +1,23 @@
+{
+ "name": "Mapas SOMEXA · CAR Huatusco y Huatusco",
+ "short_name": "Mapas SOMEXA",
+ "lang": "es-MX",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#fff8e7",
+ "theme_color": "#2f9e44",
+ "icons": [
+  {
+   "src": "icono-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icono-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}
