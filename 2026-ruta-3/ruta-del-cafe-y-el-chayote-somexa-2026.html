@@ -1368,22 +1368,22 @@ const Docx = (() => {
     return new Blob([...partes, ...central, new Uint8Array(fin.buffer)], { type: tipo });
   }
 
-  const x = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const x = (t) => String(t == null ? "" : t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const FUENTE = "Palatino Linotype";
 
   function run(texto, { b, i, tam, color } = {}) {
     const pr = (b ? "<w:b/>" : "") + (i ? "<w:i/>" : "") + (tam ? `<w:sz w:val="${tam * 2}"/>` : "") + (color ? `<w:color w:val="${color}"/>` : "");
-    return String(texto ?? "").split("\n").map((linea, k) =>
+    return String(texto == null ? "" : texto).split("\n").map((linea, k) =>
       (k ? "<w:r><w:br/></w:r>" : "") + `<w:r>${pr ? `<w:rPr>${pr}</w:rPr>` : ""}<w:t xml:space="preserve">${x(linea)}</w:t></w:r>`).join("");
   }
   function parrafo(contenido, { estilo, jc, antes, despues } = {}) {
-    const pr = (estilo ? `<w:pStyle w:val="${estilo}"/>` : "") + (antes != null || despues != null ? `<w:spacing w:before="${antes ?? 0}" w:after="${despues ?? 120}"/>` : "") + (jc ? `<w:jc w:val="${jc}"/>` : "");
+    const pr = (estilo ? `<w:pStyle w:val="${estilo}"/>` : "") + (antes != null || despues != null ? `<w:spacing w:before="${antes == null ? 0 : antes}" w:after="${despues == null ? 120 : despues}"/>` : "") + (jc ? `<w:jc w:val="${jc}"/>` : "");
     return `<w:p>${pr ? `<w:pPr>${pr}</w:pPr>` : ""}${contenido}</w:p>`;
   }
 
   // bloques: {h1|h2|h3|p|li|pie|nota: texto} · {img: Uint8Array, ext: "jpeg"|"png", ancho, alto} · {salto: true} · {campos: [[etiqueta, valor], ...]}
   function crear(bloques, opc = {}) {
-    const tamBase = Math.round((opc.tam || 11.5) * 2), interlineado = opc.interlineado || 300, despuesBase = opc.despues ?? 120;
+    const tamBase = Math.round((opc.tam || 11.5) * 2), interlineado = opc.interlineado || 300, despuesBase = opc.despues == null ? 120 : opc.despues;
     const imagenes = [];
     let cuerpo = "";
     for (const bl of bloques) {
@@ -1580,7 +1580,7 @@ function crearMapa3D(cont, cfg) {
     camara.aspect = w / h;
     camara.updateProjectionMatrix();
   }
-  new ResizeObserver(tamano).observe(cont);
+  if (window.ResizeObserver) new ResizeObserver(tamano).observe(cont); else window.addEventListener("resize", tamano);
   tamano();
 
   let diaActivo = null;
@@ -1769,7 +1769,7 @@ function crearMapa3D(cont, cfg) {
 const D = window.DATOS, M = window.MALLA;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const esc = (t) => String(t == null ? "" : t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const fmt = (n) => Number(n).toLocaleString("es-MX");
 const SITIOS = D.paradas.filter((p) => p.num);
 const VISITAS = D.paradas.filter((p) => p.tipo === "visita");
@@ -1960,9 +1960,9 @@ async function navegar() {
   vistas.forEach((v) => (v.hidden = v.dataset.vista !== vista));
   $$("nav.barra a").forEach((a) => a.setAttribute("aria-current", a.dataset.ir === vista ? "page" : "false"));
   await render[vista]();
-  if (sitio === "ratio") { document.getElementById("familia-ratio")?.scrollIntoView({ block: "start" }); return; }
+  if (sitio === "ratio") { const fr = document.getElementById("familia-ratio"); if (fr) fr.scrollIntoView({ block: "start" }); return; }
   if (vista === "ruta" && sitio && sitio.startsWith("c-")) { const el = document.getElementById(sitio); if (el) { el.open = true; el.scrollIntoView({ block: "start" }); } return; }
-  if (sitio) { const el = document.getElementById("s-" + sitio); if (el) { el.scrollIntoView({ block: "start" }); el.querySelector("details")?.setAttribute("open", ""); } }
+  if (sitio) { const el = document.getElementById("s-" + sitio); if (el) { el.scrollIntoView({ block: "start" }); const d = el.querySelector("details"); if (d) d.setAttribute("open", ""); } }
   else if (vista !== "ruta") window.scrollTo(0, 0);
 }
 window.addEventListener("hashchange", navegar);
@@ -2265,7 +2265,7 @@ async function renderSitios() {
   }
   const ahora = enCurso();
   $$(".lt.en-curso", sec).forEach((x) => x.classList.remove("en-curso"));
-  if (ahora) document.getElementById("s-" + ahora.p.id)?.classList.add("en-curso");
+  const marca = ahora && document.getElementById("s-" + ahora.p.id); if (marca) marca.classList.add("en-curso");
 }
 async function llenarSitio(p) {
   for (const el of $$(`[data-k$="${p.id}"], [data-k^="obs:${p.id}:"]`)) {

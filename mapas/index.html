@@ -233,7 +233,7 @@ window.QRS = {"car": "<svg viewBox=\"0 0 41 41\" xmlns=\"http://www.w3.org/2000/
 const D = window.DATOS, NS = "http://www.w3.org/2000/svg";
 const $ = (s) => document.querySelector(s);
 const svg = $("#svg"), lienzo = $("#lienzo");
-const esc = (t) => String(t ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const esc = (t) => String(t == null ? "" : t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const el = (tag, at = {}, padre) => { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (padre) padre.appendChild(e); return e; };
 const ruta = (p, cerrar) => "M" + p.map((q) => q[0] + " " + q[1]).join("L") + (cerrar ? "Z" : "");
 const guarda = (k, v) => { try { localStorage.setItem("mapas-somexa:" + k, v); } catch (e) {} };
@@ -381,7 +381,7 @@ function vistaInicial() {
 }
 function zoom(f, px, py) {
   const r = lienzo.getBoundingClientRect();
-  px = px ?? r.width / 2; py = py ?? r.height / 2;
+  if (px == null) px = r.width / 2; if (py == null) py = r.height / 2;
   const mx = vista.cx + (px - r.width / 2) * vista.s, my = vista.cy + (py - r.height / 2) * vista.s;
   const s2 = Math.min(Math.max(vista.s / f, vista.sMin), vista.sMax);
   vista.cx = mx - (px - r.width / 2) * s2; vista.cy = my - (py - r.height / 2) * s2; vista.s = s2; ajusta();
@@ -389,7 +389,7 @@ function zoom(f, px, py) {
 function vuela(x, y, s) {
   const a = { ...vista }, t0 = performance.now(), dur = 450;
   const paso = (t) => { const u = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - u, 3);
-    vista.cx = a.cx + (x - a.cx) * e; vista.cy = a.cy + (y - a.cy) * e; vista.s = a.s + ((s ?? a.s) - a.s) * e; ajusta(); if (u < 1) requestAnimationFrame(paso); };
+    vista.cx = a.cx + (x - a.cx) * e; vista.cy = a.cy + (y - a.cy) * e; vista.s = a.s + ((s == null ? a.s : s) - a.s) * e; ajusta(); if (u < 1) requestAnimationFrame(paso); };
   requestAnimationFrame(paso);
 }
 
@@ -499,7 +499,8 @@ function abre(i, centrar) {
 function callesDe(txt) {
   const out = new Set(), norm = txt.replace(/\bAve?\.?\s/gi, "Avenida ");
   const cap = (w) => w[0].toUpperCase() + w.slice(1).toLowerCase();
-  for (const m of norm.matchAll(/(Avenida|Calle)\s+(\d+)(?:\s+(Oriente|Poniente|Norte|Sur))?/gi)) {
+  const re = /(Avenida|Calle)\s+(\d+)(?:\s+(Oriente|Poniente|Norte|Sur))?/gi;
+  for (let m; (m = re.exec(norm)); ) {
     const base = cap(m[1]) + " " + m[2];
     for (const n of calles.keys()) if (m[3] ? n === base + " " + cap(m[3]) : n === base || n.startsWith(base + " ")) out.add(n);
   }
@@ -536,7 +537,7 @@ function abrePaseo(j) {
   if (j != null) vuela(P.paradas[j].xy[0], P.paradas[j].xy[1], Math.min(vista.s, 1.2)); else encuadra(P.p);
 }
 function alternaPaseo(v) {
-  verPaseo = v ?? !verPaseo; if (capa.paseo) capa.paseo.style.display = verPaseo ? "" : "none";
+  verPaseo = v == null ? !verPaseo : v; if (capa.paseo) capa.paseo.style.display = verPaseo ? "" : "none";
   $("#bPaseo").classList.toggle("activo", verPaseo);
   if (verPaseo && v === undefined) { aviso("👣 Sigue las huellas verdes: toca un número para ver la parada."); encuadra(M.paseo.p); }
 }
@@ -561,7 +562,7 @@ function abreCorridas(solo) {
   vuela(M.corridas.desde[0], M.corridas.desde[1], vista.sTodo / 1.1);
 }
 function alternaBus(v) {
-  verBus = v ?? !verBus; if (capa.bus) capa.bus.style.display = verBus ? "" : "none";
+  verBus = v == null ? !verBus : v; if (capa.bus) capa.bus.style.display = verBus ? "" : "none";
   $("#bBus").classList.toggle("activo", verBus);
   if (verBus) aviso("🚌 Las flechas apuntan hacia cada destino: tócalas para ver horarios.");
 }
