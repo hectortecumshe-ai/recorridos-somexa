@@ -1,13 +1,13 @@
 {
-  "name": "Ruta del Café y el Chayote · SOMEXA 2026",
-  "short_name": "Café y Chayote",
+  "name": "Ruta 3 · Zona baja · SOMEXA 2026",
+  "short_name": "Ruta 3 · Zona baja",
+  "description": "Guía de campo de la Ruta 3, zona baja: piso agroecológico de llanura costera · IV Congreso Mexicano de Agroecología 2026.",
   "lang": "es-MX",
-  "description": "Guía de campo de la Ruta 3 · IV Congreso Mexicano de Agroecología 2026",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f4efe8",
-  "theme_color": "#4a2e1e",
+  "background_color": "#f2ebd9",
+  "theme_color": "#1b2618",
   "icons": [
     {
       "src": "icono-192.png",

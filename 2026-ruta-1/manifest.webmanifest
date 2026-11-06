@@ -1,13 +1,13 @@
 {
-  "name": "Recorrido SOMEXA 2026",
-  "short_name": "SOMEXA 2026",
-  "description": "Guía de campo del recorrido agroecológico, IV Congreso Mexicano de Agroecología 2026.",
+  "name": "Ruta 1 · Zona alta · SOMEXA 2026",
+  "short_name": "Ruta 1 · Zona alta",
   "lang": "es-MX",
+  "description": "Guía de campo de la Ruta 1, zona alta: piso agroecológico de montaña · IV Congreso Mexicano de Agroecología 2026",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f2ebd9",
-  "theme_color": "#1b2618",
+  "background_color": "#eceff4",
+  "theme_color": "#2f3277",
   "icons": [
     {
       "src": "icono-192.png",

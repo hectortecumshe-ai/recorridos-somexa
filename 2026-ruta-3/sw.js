@@ -1,9 +1,14 @@
-// Guarda la guía de la Ruta del Café y el Chayote en el teléfono para usarla sin internet.
-const CACHE = "somexa-2026-ruta-3-39773e26cb";
-const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "vendor/OrbitControls.js", "vendor/logo_cenidercafe.jpg", "vendor/logo_somexa_original.jpg", "vendor/logo_uach_web.jpg", "vendor/relieve.jpg", "vendor/three.min.js"];
-self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(RECURSOS)).then(() => self.skipWaiting())));
-self.addEventListener("activate", (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("somexa-2026-ruta-3-") && k !== CACHE)
-  .map((k) => caches.delete(k)))).then(() => self.clients.claim())));
+// Guarda la guía en el teléfono para usarla sin internet.
+const CACHE = "somexa-2026-zona-baja-ecc0b55ec4";
+const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "ruta-3-zona-baja-somexa-2026.html", "vendor/logo_cenidercafe.jpg", "vendor/logo_somexa_original.jpg", "vendor/logo_uach_web.jpg", "vendor/OrbitControls.js", "vendor/three.min.js", "vendor/fuentes/Archivo-latin-79dc5e.woff2", "vendor/fuentes/Archivo-latin-ext-20ba07.woff2", "vendor/fuentes/BricolageGrotesque-latin-a97232.woff2", "vendor/fuentes/BricolageGrotesque-latin-ext-a4fe79.woff2", "vendor/fuentes/fuentes.css"];
+
+self.addEventListener("install", (e) => {
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(RECURSOS)).then(() => self.skipWaiting()));
+});
+self.addEventListener("activate", (e) => {
+  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => (k.startsWith("somexa-2026-zona-baja-") || k.startsWith("somexa-2026-ruta-")) && k !== CACHE)
+    .map((k) => caches.delete(k)))).then(() => self.clients.claim()));
+});
 // En campo la señal suele ser débil: los archivos fijos (vendor/, íconos) salen siempre de lo guardado;
 // la página busca la versión nueva en la red, pero si no responde en 3 s abre lo guardado.
 const guardada = (req) => caches.match(req, { ignoreSearch: true })

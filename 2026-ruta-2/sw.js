@@ -1,8 +1,8 @@
-// Guarda la guía de la Ruta de Altura en el teléfono para usarla sin internet.
-const CACHE = "somexa-2026-ruta-2-24e0ec7f89";
+// Guarda la guía de la Ruta 2 (zona media) en el teléfono para usarla sin internet.
+const CACHE = "somexa-2026-zona-media-daae3fdb5d";
 const RECURSOS = ["./", "index.html", "manifest.webmanifest", "icono-192.png", "icono-512.png", "vendor/OrbitControls.js", "vendor/logo_cenidercafe.jpg", "vendor/logo_somexa_original.jpg", "vendor/logo_uach_web.jpg", "vendor/relieve.jpg", "vendor/three.min.js"];
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(RECURSOS)).then(() => self.skipWaiting())));
-self.addEventListener("activate", (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("somexa-2026-ruta-2-") && k !== CACHE)
+self.addEventListener("activate", (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => (k.startsWith("somexa-2026-zona-media-") || k.startsWith("somexa-2026-ruta-")) && k !== CACHE)
   .map((k) => caches.delete(k)))).then(() => self.clients.claim())));
 // En campo la señal suele ser débil: los archivos fijos (vendor/, íconos) salen siempre de lo guardado;
 // la página busca la versión nueva en la red, pero si no responde en 3 s abre lo guardado.

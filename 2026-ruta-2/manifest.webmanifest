@@ -1,13 +1,13 @@
 {
-  "name": "Ruta de Altura · SOMEXA 2026",
-  "short_name": "Ruta de Altura",
+  "name": "Ruta 2 · Zona media · SOMEXA 2026",
+  "short_name": "Ruta 2 · Zona media",
   "lang": "es-MX",
-  "description": "Guía de campo de la Ruta 2 · IV Congreso Mexicano de Agroecología 2026",
+  "description": "Guía de campo de la Ruta 2, zona media: piso agroecológico de lomerío · IV Congreso Mexicano de Agroecología 2026",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#eceff4",
-  "theme_color": "#2f3277",
+  "background_color": "#f4efe8",
+  "theme_color": "#4a2e1e",
   "icons": [
     {
       "src": "icono-192.png",
